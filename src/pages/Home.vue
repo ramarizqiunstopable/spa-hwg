@@ -2,6 +2,7 @@
   <main>
     <!-- SearchBar untuk pencarian gambar -->
     <SearchBar :images="originalImages" @filtered="handleFiltered" />
+    <ImageCarousel :images="originalImages" />
 
     <!-- Komponen filter rating -->
     <RatingFilter @filterRating="updateRating" />
@@ -22,6 +23,7 @@ import { ref, onMounted, computed } from "vue";
 import SearchBar from "../components/SearchBar.vue";
 import GalleryCard from "../components/GalleryCard.vue";
 import RatingFilter from "../components/RatingFilter.vue";
+import ImageCarousel from "../components/Carousel.vue";
 
 const originalImages = ref([]); // Data gambar asli
 const searchResults = ref([]); // Hasil pencarian yang difilter
