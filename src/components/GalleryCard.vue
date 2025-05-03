@@ -1,10 +1,12 @@
 <template>
   <div class="gallery-card">
     <h3>{{ image.title }}</h3>
-    <ImageGalery :images="[image.image_url]" />
-    <RatingStars :rating="image.rating" />
 
-    <Tooltip :text="image.description" />
+    <Tooltip :text="image.description">
+      <ImageGalery :images="[image.image_url]" />
+    </Tooltip>
+
+    <RatingStars :rating="image.rating" />
   </div>
 </template>
 
@@ -26,5 +28,12 @@ defineProps({
   border-radius: 8px;
   background: #fff;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: scale(1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 </style>

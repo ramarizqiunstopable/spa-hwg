@@ -65,7 +65,29 @@ main {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* Default: 4 columns */
   gap: 1rem;
+  margin-bottom: 50px;
+}
+
+/* For screens wider than 1200px, display 4 columns */
+@media (max-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+/* For screens wider than 900px, display 3 columns */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+/* For screens smaller than 600px, display 1 column */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+  }
 }
 </style>
