@@ -58,10 +58,6 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalId);
 });
-
-export default {
-  name: "ImageCarousel", // Ekspor default untuk komponen
-};
 </script>
 
 <style scoped>

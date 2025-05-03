@@ -16,22 +16,20 @@ import ImageGalery from "./image.vue";
 import RatingStars from "./RatingStars.vue";
 import Tooltip from "./Tooltip.vue";
 
-defineProps({
+// Mendefinisikan props komponen
+const props = defineProps({
   image: Object,
 });
 
 const isShaking = ref(false);
 
+// Fungsi untuk memicu efek shake
 function triggerShake() {
   isShaking.value = true;
   setTimeout(() => {
     isShaking.value = false;
   }, 500); // durasi shake
 }
-
-export default {
-  name: "GalleryCard", // Ekspor default untuk komponen
-};
 </script>
 
 <style scoped>

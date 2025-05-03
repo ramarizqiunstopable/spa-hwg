@@ -25,10 +25,12 @@
 import { ref } from "vue";
 import type { ImageData } from "../types/ImageData";
 
+// Mendefinisikan props komponen
 const props = defineProps<{
   images: ImageData[];
 }>();
 
+// Mendefinisikan event yang akan dikirim ke parent
 const emit = defineEmits<{
   (e: "filtered", images: ImageData[]): void;
 }>();
@@ -36,6 +38,7 @@ const emit = defineEmits<{
 const query = ref("");
 const suggestions = ref<ImageData[]>([]);
 
+// Fungsi untuk melakukan pencarian berdasarkan query
 const onSearch = () => {
   const q = query.value.toLowerCase();
   suggestions.value = props.images.filter(
@@ -46,14 +49,11 @@ const onSearch = () => {
   emit("filtered", suggestions.value); // Emit filtered images to the parent
 };
 
+// Fungsi untuk memilih saran pencarian
 const selectSuggestion = (img: ImageData) => {
-  emit("filtered", [img]); // If you want to directly select an image
+  emit("filtered", [img]); // Emit hanya gambar yang dipilih
   query.value = img.title;
   suggestions.value = [];
-};
-
-export default {
-  name: "SearchBar", // Ekspor default untuk komponen
 };
 </script>
 

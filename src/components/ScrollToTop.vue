@@ -12,27 +12,28 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
+// State untuk visibilitas tombol
 const visible = ref(false);
 
+// Fungsi untuk memantau scroll
 const handleScroll = () => {
   visible.value = window.scrollY > 300;
 };
 
+// Fungsi untuk menggulir ke atas
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+// Menambahkan event listener saat komponen dipasang
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
 });
 
+// Menghapus event listener saat komponen akan dihapus
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
-
-export default {
-  name: "ScrollToTop", // Ekspor default untuk komponen
-};
 </script>
 
 <style scoped>

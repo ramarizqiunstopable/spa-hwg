@@ -12,16 +12,15 @@
 
 <script setup>
 import { ref } from "vue";
+
+// Mendefinisikan event yang akan di-emit
 const emit = defineEmits(["filterRating"]);
 const selected = ref(0);
 
+// Fungsi untuk mengirim nilai rating terpilih ke parent
 function emitRating() {
   emit("filterRating", selected.value);
 }
-
-export default {
-  name: "RatingFilter", // Ekspor default untuk komponen
-};
 </script>
 
 <style scoped>

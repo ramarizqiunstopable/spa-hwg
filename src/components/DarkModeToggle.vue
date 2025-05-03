@@ -38,10 +38,6 @@ function toggleTheme() {
   localStorage.setItem("theme", newTheme);
   isDarkMode.value = !isDarkMode.value;
 }
-
-export default {
-  name: "DarkModeToggle", // Ekspor default untuk komponen
-};
 </script>
 
 <style scoped>
