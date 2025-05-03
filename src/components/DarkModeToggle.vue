@@ -51,6 +51,7 @@ function toggleTheme() {
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 10px;
 }
 
 .light-bg {

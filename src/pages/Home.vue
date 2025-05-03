@@ -1,14 +1,19 @@
 <template>
   <main>
-    <!-- Tombol Toggle Dark Mode -->
-    <DarkModeToggle />
-
     <!-- SearchBar untuk pencarian gambar -->
-    <SearchBar :images="originalImages" @filtered="handleFiltered" />
     <ImageCarousel :images="originalImages" />
-
-    <!-- Komponen filter rating -->
-    <RatingFilter @filterRating="updateRating" />
+    <!-- SearchBar untuk pencarian gambar dan Filter Rating (sejajar kiri-kanan) -->
+    <div class="filter-container">
+      <div class="filter-item left">
+        <DarkModeToggle />
+      </div>
+      <div class="filter-item center">
+        <SearchBar :images="originalImages" @filtered="handleFiltered" />
+      </div>
+      <div class="filter-item right">
+        <RatingFilter @filterRating="updateRating" />
+      </div>
+    </div>
 
     <!-- Galeri -->
     <section class="gallery">
@@ -62,9 +67,78 @@ const filteredImages = computed(() => {
 <style scoped>
 main {
   max-width: 100vw;
-  overflow-x: hidden;
+
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+.filter-container {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin: 5px 0;
+
+  background-color: var(--bg-color);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.filter-item {
+  flex: 1;
+}
+
+.filter-item.center {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-item.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-item {
+    width: 100%;
+  }
+}
+
+/* Light theme */
+:root {
+  --bg-color: #ffffff;
+}
+
+/* Dark theme */
+body.dark {
+  --bg-color: #1e1e1e;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .gallery-card {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+@media (max-width: 600px) {
+  .filter-container {
+    flex-direction: column; /* Atur menjadi vertikal pada layar kecil */
+    align-items: flex-start; /* Mepet ke kiri pada mobile */
+  }
 }
 
 .gallery {
