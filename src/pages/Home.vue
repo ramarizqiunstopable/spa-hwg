@@ -16,13 +16,20 @@
     </div>
 
     <!-- Galeri -->
-    <section class="gallery">
+    <section v-if="filteredImages.length > 0" class="gallery">
       <GalleryCard
         v-for="item in filteredImages"
         :key="item.id"
         :image="item"
       />
     </section>
+
+    <div v-else class="not-found-card">
+      <div class="not-found-content">
+        <h2>😕 Tidak ada gambar ditemukan</h2>
+        <p>Silakan coba kata kunci lain atau ubah filter rating.</p>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -178,5 +185,54 @@ body.dark {
 body.dark .gallery-card {
   background-color: #333;
   border: 1px solid #555;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+  padding: 2rem;
+}
+
+.not-found-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.not-found-content {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .not-found-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff !important;
+}
+
+.not-found-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Dark mode */
+body.dark .not-found-content {
+  background-color: #2c2c2c;
+  border-color: #444;
+  color: #fff;
+}
+
+body.dark .not-found-content p {
+  color: #aaa;
 }
 </style>
