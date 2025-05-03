@@ -18,6 +18,10 @@ const selected = ref(0);
 function emitRating() {
   emit("filterRating", selected.value);
 }
+
+export default {
+  name: "RatingFilter", // Ekspor default untuk komponen
+};
 </script>
 
 <style scoped>

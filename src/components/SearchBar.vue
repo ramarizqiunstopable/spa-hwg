@@ -51,6 +51,10 @@ const selectSuggestion = (img: ImageData) => {
   query.value = img.title;
   suggestions.value = [];
 };
+
+export default {
+  name: "SearchBar", // Ekspor default untuk komponen
+};
 </script>
 
 <style scoped>

@@ -29,6 +29,10 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
+
+export default {
+  name: "ScrollToTop", // Ekspor default untuk komponen
+};
 </script>
 
 <style scoped>

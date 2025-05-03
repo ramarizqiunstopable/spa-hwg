@@ -28,6 +28,10 @@ function triggerShake() {
     isShaking.value = false;
   }, 500); // durasi shake
 }
+
+export default {
+  name: "GalleryCard", // Ekspor default untuk komponen
+};
 </script>
 
 <style scoped>
