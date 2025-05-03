@@ -1,11 +1,10 @@
 <script lang="ts">
-import { defineComponent } from "vue";
-import Home from "./pages/Home.vue"; // Mengimpor Home dengan default export
+import { defineComponent, defineAsyncComponent } from "vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    Home,
+    Home: defineAsyncComponent(() => import("./pages/Home.vue")),
   },
 });
 </script>
