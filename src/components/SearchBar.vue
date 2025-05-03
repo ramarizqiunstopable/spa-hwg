@@ -59,8 +59,8 @@ const selectSuggestion = (img: ImageData) => {
   width: 100%;
   max-width: 500px;
   margin: auto;
-  padding-top: 16px; /* Tambahkan jarak atas */
-  padding-bottom: 16px; /* Tambahkan jarak bawah */
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .input-container {
@@ -68,19 +68,21 @@ const selectSuggestion = (img: ImageData) => {
   align-items: center;
   position: relative;
   border: 1px solid #ccc;
-  border-radius: 999px; /* Full rounded (pill shape) */
+  border-radius: 999px;
   overflow: hidden;
   background-color: white;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 input {
   width: 100%;
-  padding: 12px 16px 12px 40px; /* Tambahkan padding atas bawah */
+  padding: 12px 16px 12px 40px;
   font-size: 1rem;
   border: none;
   outline: none;
-  border-radius: 999px; /* Full rounded */
+  border-radius: 999px;
   background: transparent;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .search-icon {
@@ -88,6 +90,7 @@ input {
   left: 14px;
   font-size: 18px;
   color: #999;
+  transition: color 0.3s;
 }
 
 .suggestions {
@@ -109,7 +112,36 @@ input {
   cursor: pointer;
   transition: background 0.2s;
 }
+
 .suggestions li:hover {
   background-color: #f0f0f0;
+}
+
+/* Dark mode adjustments */
+body.dark .search-bar .input-container {
+  background-color: #333;
+  border-color: #555;
+}
+
+body.dark .search-bar input {
+  color: #fff;
+  background-color: #444;
+}
+
+body.dark .search-bar .search-icon {
+  color: #bbb;
+}
+
+body.dark .suggestions {
+  background: #333;
+  border-color: #555;
+}
+
+body.dark .suggestions li {
+  color: #fff;
+}
+
+body.dark .suggestions li:hover {
+  background-color: #555;
 }
 </style>

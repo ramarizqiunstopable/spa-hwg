@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery-card">
+  <div class="gallery-card" :class="{ shake: isShaking }" @click="triggerShake">
     <h3>{{ image.title }}</h3>
 
     <Tooltip :text="image.description">
@@ -11,6 +11,7 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import ImageGalery from "./image.vue";
 import RatingStars from "./RatingStars.vue";
 import Tooltip from "./Tooltip.vue";
@@ -18,6 +19,15 @@ import Tooltip from "./Tooltip.vue";
 defineProps({
   image: Object,
 });
+
+const isShaking = ref(false);
+
+function triggerShake() {
+  isShaking.value = true;
+  setTimeout(() => {
+    isShaking.value = false;
+  }, 500); // durasi shake
+}
 </script>
 
 <style scoped>
@@ -32,8 +42,30 @@ defineProps({
 }
 
 .gallery-card:hover {
-  transform: scale(1);
+  animation: shake 0.6s;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
 }
 </style>

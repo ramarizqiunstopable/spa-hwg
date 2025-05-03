@@ -1,5 +1,8 @@
 <template>
   <main>
+    <!-- Tombol Toggle Dark Mode -->
+    <DarkModeToggle />
+
     <!-- SearchBar untuk pencarian gambar -->
     <SearchBar :images="originalImages" @filtered="handleFiltered" />
     <ImageCarousel :images="originalImages" />
@@ -24,6 +27,7 @@ import SearchBar from "../components/SearchBar.vue";
 import GalleryCard from "../components/GalleryCard.vue";
 import RatingFilter from "../components/RatingFilter.vue";
 import ImageCarousel from "../components/Carousel.vue";
+import DarkModeToggle from "../components/DarkModeToggle.vue"; // Import DarkModeToggle
 
 const originalImages = ref([]); // Data gambar asli
 const searchResults = ref([]); // Hasil pencarian yang difilter
@@ -89,5 +93,16 @@ main {
   .gallery {
     grid-template-columns: 1fr; /* 1 column for very small screens */
   }
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark .gallery-card {
+  background-color: #333;
+  border: 1px solid #555;
 }
 </style>

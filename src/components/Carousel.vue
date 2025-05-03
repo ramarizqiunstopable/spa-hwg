@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 
 const props = defineProps({
   images: {
@@ -48,6 +48,16 @@ function prev() {
     currentIndex.value = featuredImages.value.length - 1;
   }
 }
+
+// Auto slide every 5 seconds
+let intervalId;
+onMounted(() => {
+  intervalId = setInterval(next, 5000);
+});
+
+onUnmounted(() => {
+  clearInterval(intervalId);
+});
 </script>
 
 <style scoped>
@@ -77,7 +87,7 @@ function prev() {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Menjaga gambar tetap memenuhi area tanpa merusak proporsinya */
   display: block;
 }
 
@@ -137,6 +147,13 @@ function prev() {
 @media (max-width: 480px) {
   .carousel {
     height: 30vh;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Menjaga gambar tetap memenuhi area tanpa merusak proporsinya */
+    display: block;
   }
 
   .nav {
