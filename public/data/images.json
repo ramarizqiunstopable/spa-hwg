@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "title": "Helen's",
+    "description": "THE PLACE WHERE CELEBRATION FEELS ALIVE",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/3134e19e-9b5b-41db-9faa-ee1300bb5a7a.webp",
+    "is_featured": false,
+    "rating": 4
+  },
+  {
+    "id": 2,
+    "title": "Gold Dragon",
+    "description": "A PREMIUM BAR FOR EVERYONE TO ENJOY WITH LUXURIOUS AND CLASSY VIBE",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/2f86c5ac-719c-4ab8-ad0d-36c03c95b21d.webp",
+    "is_featured": false,
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "title": "Golden Tiger",
+    "description": "MODERN NIGHTCLUB WITH FUSION OF DESIGN AND ENTERTAINMENT",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/939dc75d-6a40-40c6-b5d5-d402e4b0cbdd.webp",
+    "is_featured": false,
+    "rating": 3
+  },
+  {
+    "id": 4,
+    "title": "W Superclub",
+    "description": "EXCLUSIVE SOCIAL NIGHTCLUB COMBINING DESIGN, TECHNOLOGY, AND HIGH-CLASS SERVICES",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/c3c53bc2-707d-48a4-b8fe-6e48c55b02ab.webp",
+    "is_featured": true,
+    "rating": 5
+  },
+  {
+    "id": 5,
+    "title": "Atlas",
+    "description": "THE BIGGEST BEACH CLUB IN THE WORLD",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_thumbnail/2024/8/29/9fffb241-fcf0-4e0b-8b76-c0a2c4b7cee2.webp",
+    "is_featured": true,
+    "rating": 5
+  },
+  {
+    "id": 6,
+    "title": "Rocca",
+    "description": "BRINGING ITALY'S WARMTH AND ASIA'S CHARM TO THE HEART OF BSD",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/8617cf85-030b-42f8-8198-b24e18b47969.webp",
+    "is_featured": false,
+    "rating": 3
+  },
+  {
+    "id": 7,
+    "title": "Phoenix",
+    "description": "THE EXQUISITE BASH OF NORTH; DISCOVER MODERN GASTRONOMY AT ITS FINEST.",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/production/outlet_type_background/2025/1/16/f8b7f2b9-916e-4b66-8a41-16e72fc498eb.webp",
+    "is_featured": false,
+    "rating": 3
+  },
+  {
+    "id": 8,
+    "title": "The H Club",
+    "description": "THE BIGGEST NIGHTCLUB IN ASIA FRAMING THE WORLD - CLASS STAGE IN JAKARTA, INDONESIA",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/b1c3329d-385d-45d6-8c5e-3bc832062270.webp",
+    "is_featured": true,
+    "rating": 5
+  },
+  {
+    "id": 9,
+    "title": "Cabin",
+    "description": "VIBE IN THE CITY CENTER OFFERS LIVE ENTERTAINMENT, A COZY LOUNGE, AND A GREAT ATMOSPHERE.",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/f7f1a243-043a-471c-bc62-11cbb619752e.webp",
+    "is_featured": false,
+    "rating": 5
+  },
+  {
+    "id": 10,
+    "title": "Livehouse",
+    "description": "A PREMIER DESTINATION FOR THOSE SEEKING AN IMMERSIVE LIVE MUSIC EXPERIENCE",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/da2e329b-a320-4cf8-93f1-840e123fed9f.webp",
+    "is_featured": false,
+    "rating": 3
+  },
+  {
+    "id": 11,
+    "title": "Dragon n Cow",
+    "description": "A SYMPHONY OF FLAVORS AND MANDARIN ENTERTAINMENT.",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/production/outlet_type_background/2025/1/16/aab5d49b-c6e4-465a-bab3-b8b2f9c5f52a.webp",
+    "is_featured": false,
+    "rating": 4
+  },
+  {
+    "id": 12,
+    "title": "Helens Night Mart",
+    "description": " THE FIRST DIY COCKTAIL SHOP IN INDONESIA WITH A TRENDY MINI-MART CONCEPT",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/acd5b33b-13ed-4bb9-aa10-763348194da3.webp",
+    "is_featured": true,
+    "rating": 4
+  },
+  {
+    "id": 13,
+    "title": "Phoenix Club",
+    "description": "NESTLED IN THE HEART OF MENTENG, PHOENIX CLUB STANDS AS THE ULTIMATE SOCIAL HEAVEN",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/izmwXMMDdrbE2qXzcTQP5WL4yywHDZKqkKTFDc39.webp",
+    "is_featured": true,
+    "rating": 5
+  },
+  {
+    "id": 14,
+    "title": "Mimi Livehouse",
+    "description": "INDONESIA'S FIRST MANDARIN BAR, BLENDING VIBRANT NIGHTLIFE WITH LIVE ENTERTAINMENT.",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/ecdef346-bd7e-42e4-9585-82677cee2878.webp",
+    "is_featured": false,
+    "rating": 5
+  },
+  {
+    "id": 15,
+    "title": "Ambyar Super Club",
+    "description": "A NEW NEXT-LEVEL CONCEPT IN DANGDUT, PRESENTING MORE GIMMICKS EVERY NIGHT.",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/production/outlet_type_background/2025/1/13/ltTrVECW2o1P2wE5L2b1FFUPfy2kAZHMYX4PZ9b8.webp",
+    "is_featured": false,
+    "rating": 3
+  },
+  {
+    "id": 16,
+    "title": "Super House",
+    "description": "SPECTACULAR POP MUSIC CONCERT EVERY NIGHT WITH MODERN-CLASSIC ELEGANCE LIVEHOUSE",
+    "image_url": "https://customer-api-files.s3.ap-southeast-3.amazonaws.com/staging/outlet_type_background/2024/8/29/9de58c22-e17d-43c8-948f-37d56b9c9757.webp",
+    "is_featured": false,
+    "rating": 5
+  }
+]
