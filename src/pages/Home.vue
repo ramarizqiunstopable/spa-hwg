@@ -23,29 +23,29 @@ import SearchBar from "../components/SearchBar.vue";
 import GalleryCard from "../components/GalleryCard.vue";
 import RatingFilter from "../components/RatingFilter.vue";
 
-const originalImages = ref([]);
-const searchResults = ref([]);
-const selectedRating = ref(0); // 0 artinya "All"
+const originalImages = ref([]); // Data gambar asli
+const searchResults = ref([]); // Hasil pencarian yang difilter
+const selectedRating = ref(0); // Rating yang dipilih
 
-// Fetch data
+// Fetch data gambar
 onMounted(async () => {
   const res = await fetch("/data/images.json");
   const data = await res.json();
   originalImages.value = data;
-  searchResults.value = data;
+  searchResults.value = data; // Set data asli ke searchResults
 });
 
-// Update pencarian
+// Mengupdate hasil pencarian berdasarkan query
 function handleFiltered(result) {
   searchResults.value = result;
 }
 
-// Update rating dari RatingFilter
+// Mengupdate rating dari filter
 function updateRating(val) {
   selectedRating.value = val;
 }
 
-// Kombinasi pencarian + rating
+// Filter gambar berdasarkan rating
 const filteredImages = computed(() => {
   return searchResults.value.filter((img) =>
     selectedRating.value === 0 ? true : img.rating === selectedRating.value
