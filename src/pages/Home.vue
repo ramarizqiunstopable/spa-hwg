@@ -30,6 +30,8 @@
         <p>Silakan coba kata kunci lain atau ubah filter rating.</p>
       </div>
     </div>
+
+    <ScrollToTop />
   </main>
 </template>
 
@@ -40,6 +42,7 @@ import GalleryCard from "../components/GalleryCard.vue";
 import RatingFilter from "../components/RatingFilter.vue";
 import ImageCarousel from "../components/Carousel.vue";
 import DarkModeToggle from "../components/DarkModeToggle.vue"; // Import DarkModeToggle
+import ScrollToTop from "../components/ScrollToTop.vue";
 
 const originalImages = ref([]); // Data gambar asli
 const searchResults = ref([]); // Hasil pencarian yang difilter
