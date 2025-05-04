@@ -36,14 +36,20 @@ const emit = defineEmits<{
 const query = ref("");
 const suggestions = ref<ImageData[]>([]);
 
+let debounceTimer: ReturnType<typeof setTimeout> | null = null;
+
 const onSearch = () => {
-  const q = query.value.toLowerCase();
-  suggestions.value = props.images.filter(
-    (img) =>
-      img.title.toLowerCase().includes(q) ||
-      img.description.toLowerCase().includes(q)
-  );
-  emit("filtered", suggestions.value);
+  if (debounceTimer) clearTimeout(debounceTimer);
+
+  debounceTimer = setTimeout(() => {
+    const q = query.value.toLowerCase();
+    suggestions.value = props.images.filter(
+      (img) =>
+        img.title.toLowerCase().includes(q) ||
+        img.description.toLowerCase().includes(q)
+    );
+    emit("filtered", suggestions.value);
+  }, 3000); // Delay 300ms
 };
 
 const selectSuggestion = (img: ImageData) => {
