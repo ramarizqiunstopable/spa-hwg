@@ -41,6 +41,6 @@ Proyek ini adalah aplikasi galeri foto berbasis Vue 3 yang menggunakan TypeScrip
 
 ## Tantangan yang dihadapi
 
-1. Mengimplementasikan fitur-fitur seperti autocomplete , solusinya harus membuat container sendri dan di styling agar tampil sugestions autocomlate
+1. Mengimplementasikan fitur-fitur seperti autocomplete , solusinya harus membuat container sendri dan di styling agar tampil sugestions autocomplate
 2. Menyesuaikan konfigurasi ESLint untuk Vue 3 dan TypeScript. ssolusinya cek dan solve type data harus sudah dideklarasikan
 3. Mengimplementasikan Filter Rating salah Logicnya seharusnya menggunakan sintag "===" bukan ">=" agar bisa filter by rating yg dipilih
