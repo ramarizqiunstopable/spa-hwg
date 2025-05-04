@@ -18,8 +18,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.stars {
-  color: #ffd700;
-}
-</style>
+<style scoped src="./index.css"></style>

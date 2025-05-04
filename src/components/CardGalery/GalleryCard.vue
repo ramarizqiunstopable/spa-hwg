@@ -15,8 +15,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import ImageGalery from "../image.vue";
-import RatingStars from "../RatingStars.vue";
+import ImageGalery from "../ImageCard/image.vue";
+import RatingStars from "../StarRate/RatingStars.vue";
 import Tooltip from "../TooltipsBase/Tooltip.vue";
 
 interface ImageProps {
