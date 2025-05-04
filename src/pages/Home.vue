@@ -41,7 +41,7 @@ import SearchBar from "../components/SearchBar.vue";
 import GalleryCard from "../components/GalleryCard.vue";
 import RatingFilter from "../components/RatingFilter.vue";
 import ImageCarousel from "../components/Carousel.vue";
-import DarkModeToggle from "../components/DarkModeToggle.vue"; // Import DarkModeToggle
+import DarkModeToggle from "../components/DarkMode/DarkModeToggle.vue"; // Import DarkModeToggle
 import ScrollToTop from "../components/ScrollTop/ScrollToTop.vue";
 
 const originalImages = ref([]); // Data gambar asli
