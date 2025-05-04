@@ -21,7 +21,7 @@ export default defineComponent({
 <style scoped>
 .imagegalery {
   width: 100%;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
   border-radius: 12px;
   position: relative;

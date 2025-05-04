@@ -1,12 +1,15 @@
 <template>
   <div class="gallery-card" :class="{ shake: isShaking }" @click="triggerShake">
-    <h3>{{ image.title }}</h3>
-
     <Tooltip :text="image.description">
       <ImageGalery :images="[image.image_url]" />
     </Tooltip>
 
-    <RatingStars :rating="image.rating" />
+    <h1>{{ image.title }}</h1>
+    <!-- Tambahkan wrapper flex di sini -->
+    <div class="rating-row">
+      <p>View Ratings</p>
+      <RatingStars :rating="image.rating" />
+    </div>
   </div>
 </template>
 
@@ -41,7 +44,7 @@ function triggerShake() {
 <style scoped>
 .gallery-card {
   text-align: center;
-  padding: 1rem;
+
   border: 1px solid #ddd;
   border-radius: 8px;
   background: #fff;
@@ -75,5 +78,16 @@ function triggerShake() {
 
 .shake {
   animation: shake 0.5s;
+}
+.rating-row {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  text-align: left;
+  margin: 20px;
 }
 </style>
