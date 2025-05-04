@@ -1,7 +1,13 @@
 <template>
   <main>
-    <!-- SearchBar untuk pencarian gambar -->
-    <ImageCarousel :images="originalImages" />
+    <!-- Jumbotron text -->
+    <div class="carousel-container">
+      <div class="carousel-header-text">
+        <h1>HOLIWINGS</h1>
+        <p>NOT YOUR AVERAGE LIFESTYLE COMPANY</p>
+      </div>
+      <ImageCarousel class="carousel-full-width" :images="originalImages" />
+    </div>
     <!-- SearchBar untuk pencarian gambar dan Filter Rating (sejajar kiri-kanan) -->
     <div class="filter-container">
       <div class="filter-item left">
@@ -237,5 +243,83 @@ body.dark .not-found-content {
 
 body.dark .not-found-content p {
   color: #aaa;
+}
+
+.carousel-full-width {
+  width: 100vw; /* Full lebar layar */
+  margin-left: calc(
+    -1 * (100vw - 100%) / 2
+  ); /* Menghapus padding horizontal dari <main> */
+  margin-right: calc(-1 * (100vw - 100%) / 2);
+  overflow: hidden;
+}
+.carousel-wrapper {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  margin-right: calc(-1 * (100vw - 100%) / 2);
+  overflow: hidden;
+}
+
+.carousel-header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+  padding: 1.5rem;
+
+  border-radius: 1rem;
+}
+
+.carousel-header-text h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  transition: color 0.3s ease;
+}
+
+.carousel-header-text p {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.carousel-header-text h1:hover,
+.carousel-header-text p:hover {
+  color: orange;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-header-text h1 {
+    font-size: 3rem;
+  }
+
+  .carousel-header-text p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-header-text h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-header-text p {
+    font-size: 1rem;
+  }
 }
 </style>
