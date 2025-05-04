@@ -46,7 +46,7 @@ import { ref, onMounted, computed } from "vue";
 import SearchBar from "../../components/SearchBar/SearchBar.vue";
 import GalleryCard from "../../components/GalleryCard.vue";
 import RatingFilter from "../../components/RatingFilter.vue";
-import ImageCarousel from "../../components/Carousel.vue";
+import ImageCarousel from "../../components/Carousel/Carousel.vue";
 import DarkModeToggle from "../../components/DarkMode/DarkModeToggle.vue"; // Import DarkModeToggle
 import ScrollToTop from "../../components/ScrollTop/ScrollToTop.vue";
 
