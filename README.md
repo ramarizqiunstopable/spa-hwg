@@ -16,6 +16,7 @@ Proyek ini adalah aplikasi galeri foto berbasis Vue 3 yang menggunakan TypeScrip
 ## Fitur Tambahan (Improvment)
 
 - **Sticky**: Fitur Navbar auto top fixed ketika user scroll ke bawah.
+- **Notifikasi**: Fitur ketika user data yang tidak ditemukan pada fitur search.
 - **Button Scroll to top**: Fitur Auto scroll to top ketika user klik button yang muncul ketika user sudah scroll paling bawah .
 - **Efek Shake**: Animasi efek Shake ketika user hover setiap card.
 - **Efek transparant Blur**: Animasi efek transparant Blur Navbar.
