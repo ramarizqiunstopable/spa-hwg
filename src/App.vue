@@ -4,7 +4,7 @@ import { defineComponent, defineAsyncComponent } from "vue";
 export default defineComponent({
   name: "App",
   components: {
-    Home: defineAsyncComponent(() => import("./pages/Home.vue")),
+    Home: defineAsyncComponent(() => import("./pages/Home/Home.vue")),
   },
 });
 </script>
