@@ -28,9 +28,8 @@ Proyek ini adalah aplikasi galeri foto berbasis Vue 3 yang menggunakan TypeScrip
    npm install
    ```
 3. Jalankan Apliksi:
+   ```bash
    npm run dev
-   ```
-
    ```
 
 ## Tantangan yang dihadapi
