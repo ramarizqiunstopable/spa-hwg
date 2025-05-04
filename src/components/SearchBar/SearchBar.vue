@@ -23,14 +23,14 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import type { ImageData } from "@/types/ImageData"; // Sesuaikan path jika perlu
+import { ImageData } from "../../types/ImageData"; // pastikan path benar
 
 const props = defineProps<{
   images: ImageData[];
 }>();
 
 const emit = defineEmits<{
-  (event: "filtered", value: ImageData[]): void;
+  filtered: [ImageData[]];
 }>();
 
 const query = ref("");
