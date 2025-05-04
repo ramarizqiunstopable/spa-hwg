@@ -20,6 +20,12 @@ Proyek ini adalah aplikasi galeri foto berbasis Vue 3 yang menggunakan TypeScrip
 - **Button Scroll to top**: Fitur Auto scroll to top ketika user klik button yang muncul ketika user sudah scroll paling bawah .
 - **Efek Shake**: Animasi efek Shake ketika user hover setiap card.
 - **Efek transparant Blur**: Animasi efek transparant Blur Navbar.
+- **Fitur Debounce**: Fungsi pencarian baru jalan setelah user berhenti ngetik selama misalnya 300ms,Ini bikin aplikasi lebih efisien dan responsif misal
+  ```bash
+  User mengetik "hele"
+  → tunggu 300ms
+  → baru filter("hele")
+  ```
 
 ## Cara Menjalankan Proyek
 
@@ -36,5 +42,5 @@ Proyek ini adalah aplikasi galeri foto berbasis Vue 3 yang menggunakan TypeScrip
 ## Tantangan yang dihadapi
 
 1. Mengimplementasikan fitur-fitur seperti autocomplete , solusinya harus membuat container sendri dan di styling agar tampil sugestions autocomlate
-2. Menyesuaikan konfigurasi ESLint untuk Vue 3 dan TypeScript.
+2. Menyesuaikan konfigurasi ESLint untuk Vue 3 dan TypeScript. ssolusinya cek dan solve type data harus sudah dideklarasikan
 3. Mengimplementasikan Filter Rating salah Logicnya seharusnya menggunakan sintag "===" bukan ">=" agar bisa filter by rating yg dipilih

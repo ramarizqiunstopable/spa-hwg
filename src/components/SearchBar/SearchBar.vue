@@ -49,7 +49,7 @@ const onSearch = () => {
         img.description.toLowerCase().includes(q)
     );
     emit("filtered", suggestions.value);
-  }, 3000); // Delay 300ms
+  }, 300); // Delay 300ms
 };
 
 const selectSuggestion = (img: ImageData) => {
