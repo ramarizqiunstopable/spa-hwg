@@ -4,16 +4,24 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  images: Array,
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "ImageGalery",
+  props: {
+    images: {
+      type: Array as () => string[],
+      required: true,
+    },
+  },
 });
 </script>
 
 <style scoped>
 .imagegalery {
   width: 100%;
-  height: 200px; /* Atur tinggi tetap */
+  height: 200px;
   overflow: hidden;
   border-radius: 12px;
   position: relative;
@@ -23,7 +31,7 @@ defineProps({
 .imagegalery img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ini kunci agar proporsional dan rapi */
+  object-fit: cover;
   object-position: center;
   display: block;
 }

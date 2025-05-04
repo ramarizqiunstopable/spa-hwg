@@ -10,25 +10,31 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import ImageGalery from "./image.vue";
 import RatingStars from "./RatingStars.vue";
-import Tooltip from "./Tooltip.vue";
+import Tooltip from "./TooltipsBase/Tooltip.vue";
 
-// Mendefinisikan props komponen
-const props = defineProps({
-  image: Object,
-});
+interface ImageProps {
+  image: {
+    title: string;
+    description: string;
+    image_url: string;
+    rating: number;
+  };
+}
+
+const props = defineProps<ImageProps>();
+const image = props.image;
 
 const isShaking = ref(false);
 
-// Fungsi untuk memicu efek shake
 function triggerShake() {
   isShaking.value = true;
   setTimeout(() => {
     isShaking.value = false;
-  }, 500); // durasi shake
+  }, 500);
 }
 </script>
 

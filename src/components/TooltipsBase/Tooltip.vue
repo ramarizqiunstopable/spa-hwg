@@ -5,8 +5,18 @@
   </div>
 </template>
 
-<script setup>
-defineProps({ text: String });
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "Tooltip",
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+  },
+});
 </script>
 
 <style scoped>
@@ -21,7 +31,7 @@ defineProps({ text: String });
   bottom: 0.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.7); /* Transparan */
+  background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 6px 12px;
   font-size: 0.75rem;

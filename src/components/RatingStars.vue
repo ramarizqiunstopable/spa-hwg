@@ -4,9 +4,17 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  rating: Number,
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "RatingStars",
+  props: {
+    rating: {
+      type: Number,
+      required: true,
+    },
+  },
 });
 </script>
 
