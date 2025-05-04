@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue";
-import { ImageData } from "../../types/ImageData"; // pastikan path benar
+import { ImageData } from "../../types/ImageData";
 
 const props = defineProps<{
   images: ImageData[];
